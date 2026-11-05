@@ -1,0 +1,66 @@
+name: Günlük veri + yayın
+
+on:
+  schedule:
+    - cron: '30 15 * * 1-5'   # 18:30 TSİ, hafta içi (seans kapanışı sonrası)
+  workflow_dispatch: {}
+  push:
+    branches: [main]
+    paths-ignore: ['public/data/**']
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency: { group: gunluk, cancel-in-progress: false }
+
+jobs:
+  veri-ve-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Veri çek (yalnızca zamanlanmış veya elle tetiklemede)
+        if: github.event_name != 'push'
+        uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - if: github.event_name != 'push'
+        env:
+          EVDS_API_KEY: ${{ secrets.EVDS_API_KEY }}   # GitHub Secrets; loglara maskeli düşer
+          DATA_PAROLA: ${{ secrets.DATA_PAROLA }}     # veri şifreleme parolası; yoksa betik hiçbir şey yazmaz
+        run: |
+          pip install -q -r veri_hatti/requirements.txt
+          if [ -z "$DATA_PAROLA" ]; then echo "::error::DATA_PAROLA secret tanımlı değil"; exit 1; fi
+          python veri_hatti/cek_gunluk.py || echo "::warning::Bazı veriler güncellenemedi (meta.json'a bakın)"
+      - name: Veriyi repoya yaz
+        if: github.event_name != 'push'
+        run: |
+          git config user.name "veri-botu"
+          git config user.email "veri-botu@users.noreply.github.com"
+          git add public/data
+          git diff --cached --quiet || (git commit -m "veri: $(date -u +%F)" && git push)
+
+      - uses: actions/setup-node@v4
+        with: { node-version: '24', cache: npm }
+      - run: npm ci
+      - run: npx vitest run
+      - run: npm run build
+      - name: Koruma — yayında düz ham veri olmamalı
+        run: |
+          for f in fiyatlar makro haberler; do
+            if [ -e "dist/data/$f.json" ]; then echo "::error::dist/data/$f.json düz metin!"; exit 1; fi
+            [ -e "dist/data/$f.enc.json" ] || { echo "::error::dist/data/$f.enc.json yok"; exit 1; }
+          done
+          if grep -rqE '"(deger|varliklar|haberler)"' dist/data/*.enc.json; then echo "::error::şifreli dosyada düz alan"; exit 1; fi
+          echo "Koruma geçti: yalnızca şifreli veri yayınlanıyor"
+      - uses: actions/upload-pages-artifact@v3
+        with: { path: dist }
+
+  yayin:
+    needs: veri-ve-build
+    runs-on: ubuntu-latest
+    environment: { name: github-pages, url: '${{ steps.d.outputs.page_url }}' }
+    steps:
+      - id: d
+        uses: actions/deploy-pages@v4

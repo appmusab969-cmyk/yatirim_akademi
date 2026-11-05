@@ -1,0 +1,66 @@
+:root {
+  --zemin: #0f1115; --yuzey: #181b22; --yuzey2: #20242d; --cizgi: #2c313c;
+  --metin: #e8eaed; --soluk: #9aa3b2; --vurgu: #4fc3a1; --uyari: #f2b84b; --kotu: #ef6b6b; --iyi: #5bd18b;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  font-size: 18px; line-height: 1.6; color: var(--metin); background: var(--zemin);
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { margin: 0; }
+a { color: var(--vurgu); }
+h1 { font-size: 1.6rem; margin: .4rem 0 1rem; }
+h2 { font-size: 1.25rem; margin: 1.6rem 0 .6rem; }
+h3 { font-size: 1.05rem; margin: 1.2rem 0 .4rem; }
+.sayfa { max-width: 760px; margin: 0 auto; padding: 1rem 1rem 6.5rem; }
+.kart { background: var(--yuzey); border: 1px solid var(--cizgi); border-radius: 14px; padding: 1rem 1.1rem; margin: .8rem 0; }
+.kart.vurgu { border-color: var(--vurgu); }
+.kart.uyari { border-color: var(--uyari); }
+.kart.kotu { border-color: var(--kotu); }
+.soluk { color: var(--soluk); }
+.kucuk { font-size: .85rem; }
+.buyuk { font-size: 1.7rem; font-weight: 650; font-variant-numeric: tabular-nums; }
+.iyi { color: var(--iyi); } .kotu-r { color: var(--kotu); } .uyari-r { color: var(--uyari); }
+.satir { display: flex; gap: .8rem; align-items: center; flex-wrap: wrap; }
+.ara { justify-content: space-between; }
+.izgara { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: .8rem; }
+button, .dugme {
+  font: inherit; font-size: 1rem; background: var(--yuzey2); color: var(--metin); border: 1px solid var(--cizgi);
+  border-radius: 12px; padding: .7rem 1.1rem; cursor: pointer; min-height: 48px; text-decoration: none; display: inline-flex; align-items: center; justify-content: center;
+}
+button.ana, .dugme.ana { background: var(--vurgu); color: #06231a; border-color: var(--vurgu); font-weight: 650; }
+button:disabled { opacity: .45; cursor: not-allowed; }
+input, select, textarea {
+  font: inherit; font-size: 1rem; width: 100%; background: var(--zemin); color: var(--metin);
+  border: 1px solid var(--cizgi); border-radius: 10px; padding: .65rem .8rem; min-height: 48px;
+}
+textarea { min-height: 110px; resize: vertical; }
+label { display: block; margin: .8rem 0 .3rem; color: var(--soluk); font-size: .92rem; }
+table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+th, td { text-align: left; padding: .5rem .4rem; border-bottom: 1px solid var(--cizgi); }
+th { color: var(--soluk); font-weight: 500; font-size: .85rem; }
+td.s, th.s { text-align: right; }
+.alt-menu {
+  position: fixed; bottom: 0; left: 0; right: 0; background: var(--yuzey); border-top: 1px solid var(--cizgi);
+  display: flex; justify-content: space-around; padding: .3rem 0 calc(.3rem + env(safe-area-inset-bottom));
+}
+.alt-menu a { color: var(--soluk); text-decoration: none; font-size: .8rem; display: flex; flex-direction: column; align-items: center; padding: .35rem .6rem; min-width: 64px; }
+.alt-menu a.active { color: var(--vurgu); }
+.alt-menu .ik { font-size: 1.35rem; line-height: 1.2; }
+.serit { font-size: .8rem; color: var(--soluk); border-top: 1px dashed var(--cizgi); margin-top: .7rem; padding-top: .45rem; }
+.etiket { display: inline-block; font-size: .75rem; padding: .1rem .55rem; border-radius: 99px; border: 1px solid var(--cizgi); color: var(--soluk); }
+.etiket.eski { color: var(--uyari); border-color: var(--uyari); }
+.etiket.yok { color: var(--kotu); border-color: var(--kotu); }
+.etiket.elle { color: #8fb4ff; border-color: #8fb4ff; }
+.terim { border-left: 3px solid var(--vurgu); background: var(--yuzey2); padding: .6rem .9rem; border-radius: 0 10px 10px 0; margin: .8rem 0; }
+.ders-metin p { margin: .6rem 0; }
+.ders-metin code, .formul { font-family: ui-monospace, Consolas, monospace; background: var(--yuzey2); padding: .1rem .35rem; border-radius: 6px; font-size: .95em; }
+.formul { display: block; padding: .6rem .8rem; margin: .6rem 0; white-space: pre-wrap; }
+.secenek { width: 100%; justify-content: flex-start; text-align: left; margin: .35rem 0; }
+.secenek.dogru { border-color: var(--iyi); background: #133222; }
+.secenek.yanlis { border-color: var(--kotu); background: #3a1717; }
+.ilerleme { height: 8px; background: var(--yuzey2); border-radius: 99px; overflow: hidden; }
+.ilerleme > div { height: 100%; background: var(--vurgu); }
+.kilit { opacity: .5; }
+.sekme { display: flex; gap: .4rem; flex-wrap: wrap; margin: .5rem 0; }
+.sekme button { min-height: 40px; padding: .4rem .9rem; }
+.sekme button.secili { border-color: var(--vurgu); color: var(--vurgu); }

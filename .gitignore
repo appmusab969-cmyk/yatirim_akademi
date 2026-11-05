@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+__pycache__/
+*.pyc
+veri_hatti/.cache/
+public/data/fiyatlar.json
+public/data/makro.json
+public/data/haberler.json

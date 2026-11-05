@@ -1,0 +1,13 @@
+{
+  "_aciklama": "Uygulamada işlem yapılabilecek varlıklar. İstediğiniz kodu ekleyin; bulunamayan kod sessizce atlanmaz, rapora yazılır.",
+  "hisseler": ["AKBNK","ARCLK","ASELS","BIMAS","EKGYO","ENKAI","EREGL","FROTO","GARAN","HALKB","ISCTR","KCHOL","KOZAL","KRDMD","MGROS","PETKM","PGSUS","SAHOL","SASA","SISE","TAVHL","TCELL","THYAO","TOASO","TTKOM","TUPRS","ULKER","VAKBN","YKBNK","AEFES","CCOLA","DOAS","OTKAR","TKFEN","ALARK"],
+  "endeksler": ["XU100","XU030","XBANK","XUSIN"],
+  "fonlar": ["AFT","TCD","YAC","IPB","MAC","NNF","GAF","TTE","IIH","KZL","PPN","DBZ"],
+  "doviz": ["USD","EUR"],
+  "rss": [
+    ["AA Ekonomi","https://www.aa.com.tr/tr/rss/default?cat=ekonomi"],
+    ["Bloomberg HT","https://www.bloomberght.com/rss"],
+    ["TRT Haber Ekonomi","https://www.trthaber.com/ekonomi_articles.rss"],
+    ["NTV Ekonomi","https://www.ntv.com.tr/ekonomi.rss"]
+  ]
+}

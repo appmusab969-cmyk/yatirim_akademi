@@ -1,0 +1,4 @@
+borsapy==0.11.0
+feedparser>=6
+requests>=2.31
+cryptography>=42

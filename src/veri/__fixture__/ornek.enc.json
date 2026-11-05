@@ -1,0 +1,1 @@
+{"v": 1, "alg": "AES-GCM", "kdf": "PBKDF2-SHA256", "iter": 1000, "salt": "4i5cEu+buIymnRjuky4XLw==", "iv": "9MWBMmiPh8X7Yio6", "ad": "fiyatlar", "ct": "48/qklsxdhpibCBR5euFvW6sKl/Qw+bzeXtZlQWjHnIFmYwpPV5ZpzUVR5ZWjhn2mFqn"}

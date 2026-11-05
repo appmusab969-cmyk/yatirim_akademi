@@ -1,0 +1,14 @@
+{
+ "uretildi": "2026-11-05T08:23+03:00",
+ "sonuc": {
+  "fiyatlar": "ok",
+  "makro": "ok",
+  "haberler": "ok"
+ },
+ "rapor": [
+  "UYARI fon YAC: fiyat yok",
+  "UYARI fon KZL: fiyat yok",
+  "BİLGİ EVDS_API_KEY yok: politika faizi için elle giriş kullanılacak.",
+  "RED politika faizi 7.0 (TCMB (borsapy)): gecelik koridor (57.0, 62.0) dışında, kullanılmadı."
+ ]
+}

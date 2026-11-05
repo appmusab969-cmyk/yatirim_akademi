@@ -1,0 +1,190 @@
+{
+ "uretildi": "2026-11-04",
+ "donem": "2025/12",
+ "fiyat_tarihi": "2026-10-30",
+ "kaynak": "İş Yatırım mali tablo verisi (KAP finansal raporlarından derlenmiş); çarpanlar borsapy kapanış fiyatıyla hesaplandı (ham fiyat yayımlanmaz)",
+ "tanimlar": {
+  "FAVOK": "Brüt kâr − pazarlama − genel yönetim − Ar-Ge giderleri + amortisman (esas faaliyet; \"diğer faaliyet gelir/giderleri\" hariç)",
+  "NET_BORC": "Kısa + uzun vadeli finansal borçlar − nakit ve nakit benzerleri − kısa vadeli finansal yatırımlar",
+  "ROE": "Ana ortaklık net kârı ÷ dönem sonu ana ortaklık özkaynağı (basitleştirme: ortalama özkaynak daha doğrudur)",
+  "PIYASA_DEGERI": "Kapanış fiyatı × pay sayısı (pay sayısı = ödenmiş sermaye / 1 TL nominal)",
+  "FD": "Piyasa değeri + net borç + azınlık payları"
+ },
+ "sirketler": {
+  "THYAO": {
+   "pay_sayisi_mn": 1380.0,
+   "ilk_aciklama": "2026-03-04",
+   "mn_tl": {
+    "hasilat": 1125149,
+    "brut_kar": 183185,
+    "esas_faaliyet_kari": 74818,
+    "amortisman": 111496,
+    "favok": 186314,
+    "net_kar_ana": 139200,
+    "toplam_varlik": 2351336,
+    "ozkaynak_ana": 1073041,
+    "finansal_borc": 899973,
+    "nakit": 101314,
+    "kv_finansal_yatirim": 215182,
+    "net_borc": 583477,
+    "isletme_nakit": 218811,
+    "yatirim_harcamasi": -90457,
+    "serbest_nakit": 48451,
+    "net_ypp": -325109,
+    "piyasa_degeri": 334236,
+    "firma_degeri": 917753
+   },
+   "oran": {
+    "FK": 2.4,
+    "PDDD": 0.31,
+    "FD_FAVOK": 4.93,
+    "ROE": 0.13,
+    "brut_marj": 0.16,
+    "favok_marj": 0.17,
+    "net_marj": 0.12,
+    "net_borc_favok": 3.13,
+    "ozk_varlik": 0.46
+   }
+  },
+  "BIMAS": {
+   "pay_sayisi_mn": 600.0,
+   "ilk_aciklama": "2026-03-11",
+   "mn_tl": {
+    "hasilat": 849112,
+    "brut_kar": 164210,
+    "esas_faaliyet_kari": 19840,
+    "amortisman": 31367,
+    "favok": 51207,
+    "net_kar_ana": 21941,
+    "toplam_varlik": 398134,
+    "ozkaynak_ana": 194990,
+    "finansal_borc": 62090,
+    "nakit": 4075,
+    "kv_finansal_yatirim": 12590,
+    "net_borc": 45425,
+    "isletme_nakit": 48167,
+    "yatirim_harcamasi": -24484,
+    "serbest_nakit": 23310,
+    "net_ypp": 335,
+    "piyasa_degeri": 208500,
+    "firma_degeri": 255703
+   },
+   "oran": {
+    "FK": 9.5,
+    "PDDD": 1.07,
+    "FD_FAVOK": 4.99,
+    "ROE": 0.11,
+    "brut_marj": 0.19,
+    "favok_marj": 0.06,
+    "net_marj": 0.03,
+    "net_borc_favok": 0.89,
+    "ozk_varlik": 0.49
+   }
+  },
+  "EREGL": {
+   "pay_sayisi_mn": 7000.0,
+   "ilk_aciklama": "2026-02-17",
+   "mn_tl": {
+    "hasilat": 259711,
+    "brut_kar": 23079,
+    "esas_faaliyet_kari": 11382,
+    "amortisman": 14042,
+    "favok": 25424,
+    "net_kar_ana": 636,
+    "toplam_varlik": 694350,
+    "ozkaynak_ana": 357750,
+    "finansal_borc": 196845,
+    "nakit": 143557,
+    "kv_finansal_yatirim": 0,
+    "net_borc": 53288,
+    "isletme_nakit": 80875,
+    "yatirim_harcamasi": -19079,
+    "serbest_nakit": 59385,
+    "net_ypp": -2125,
+    "piyasa_degeri": 207620,
+    "firma_degeri": 272727
+   },
+   "oran": {
+    "FK": 326.31,
+    "PDDD": 0.58,
+    "FD_FAVOK": 10.73,
+    "ROE": 0.0,
+    "brut_marj": 0.09,
+    "favok_marj": 0.1,
+    "net_marj": 0.0,
+    "net_borc_favok": 2.1,
+    "ozk_varlik": 0.52
+   }
+  },
+  "ASELS": {
+   "pay_sayisi_mn": 4560.0,
+   "ilk_aciklama": "2026-02-24",
+   "mn_tl": {
+    "hasilat": 224324,
+    "brut_kar": 71392,
+    "esas_faaliyet_kari": 51940,
+    "amortisman": 6898,
+    "favok": 58838,
+    "net_kar_ana": 37232,
+    "toplam_varlik": 536537,
+    "ozkaynak_ana": 311328,
+    "finansal_borc": 53527,
+    "nakit": 36159,
+    "kv_finansal_yatirim": 0,
+    "net_borc": 17367,
+    "isletme_nakit": 60794,
+    "yatirim_harcamasi": -46840,
+    "serbest_nakit": 12452,
+    "net_ypp": 28143,
+    "piyasa_degeri": 1582320,
+    "firma_degeri": 1601373
+   },
+   "oran": {
+    "FK": 42.5,
+    "PDDD": 5.08,
+    "FD_FAVOK": 27.22,
+    "ROE": 0.12,
+    "brut_marj": 0.32,
+    "favok_marj": 0.26,
+    "net_marj": 0.17,
+    "net_borc_favok": 0.3,
+    "ozk_varlik": 0.58
+   }
+  },
+  "TUPRS": {
+   "pay_sayisi_mn": 1926.8,
+   "ilk_aciklama": "2026-02-06",
+   "mn_tl": {
+    "hasilat": 977815,
+    "brut_kar": 95658,
+    "esas_faaliyet_kari": 55873,
+    "amortisman": 17223,
+    "favok": 73096,
+    "net_kar_ana": 34766,
+    "toplam_varlik": 697099,
+    "ozkaynak_ana": 428758,
+    "finansal_borc": 59173,
+    "nakit": 126281,
+    "kv_finansal_yatirim": 0,
+    "net_borc": -67108,
+    "isletme_nakit": 58249,
+    "yatirim_harcamasi": -22465,
+    "serbest_nakit": 35384,
+    "net_ypp": -68428,
+    "piyasa_degeri": 661854,
+    "firma_degeri": 601493
+   },
+   "oran": {
+    "FK": 19.04,
+    "PDDD": 1.54,
+    "FD_FAVOK": 8.23,
+    "ROE": 0.08,
+    "brut_marj": 0.1,
+    "favok_marj": 0.07,
+    "net_marj": 0.04,
+    "net_borc_favok": -0.92,
+    "ozk_varlik": 0.62
+   }
+  }
+ }
+}
