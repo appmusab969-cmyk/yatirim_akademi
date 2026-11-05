@@ -52,7 +52,11 @@ jobs:
             if [ -e "dist/data/$f.json" ]; then echo "::error::dist/data/$f.json düz metin!"; exit 1; fi
             [ -e "dist/data/$f.enc.json" ] || { echo "::error::dist/data/$f.enc.json yok"; exit 1; }
           done
-          if grep -rqE '"(deger|varliklar|haberler)"' dist/data/*.enc.json; then echo "::error::şifreli dosyada düz alan"; exit 1; fi
+          # her .enc.json yalnızca zarf alanlarını içermeli; ct base64 olmalı (düz JSON değil)
+          for f in dist/data/*.enc.json; do
+            [ "$(jq -c 'keys' "$f")" = '["ad","alg","ct","iter","iv","kdf","salt","v"]' ] || { echo "::error::$f beklenmeyen alan içeriyor"; exit 1; }
+            jq -e '.ct | test("^[A-Za-z0-9+/]+=*$")' "$f" >/dev/null || { echo "::error::$f ct base64 değil"; exit 1; }
+          done
           echo "Koruma geçti: yalnızca şifreli veri yayınlanıyor"
       - uses: actions/upload-pages-artifact@v3
         with: { path: dist }
